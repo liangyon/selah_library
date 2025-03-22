@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { useAuth } from '@/contexts/AuthContext';
 
 
+
 export default function Home() {
   const { logout } = useAuth();
   const router = useRouter();
@@ -16,6 +17,9 @@ export default function Home() {
       router.push('/login');
       return;
     }
+
+
+
   });
 
 
