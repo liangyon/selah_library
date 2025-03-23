@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ClientLayout } from "@/components/clientLayout"; 
+import { MdLibraryMusic} from "react-icons/md";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +19,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Selah",
+  icons: {
+    icon: "/favicon.ico",
+  },
   description: "Music Library",
 };
 
