@@ -7,6 +7,8 @@ class Music extends Model {
   public name!: string;
   public author!: string;
   public pdfPath!: string;
+  public driveFileId!: string; // Google Drive file ID instead of local path
+  public thumbnail?: string;   // Optional thumbnail URL
   public tags?: Tag[];
 }
 
@@ -25,10 +27,18 @@ Music.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    pdfPath: {
+    filePath: {
       type: DataTypes.STRING,
       allowNull: true,
     },
+    driveFileId: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    thumbnail: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    }
   },
   {
     sequelize,
